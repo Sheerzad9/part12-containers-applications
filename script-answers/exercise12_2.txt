@@ -1,0 +1,22 @@
+Script started on 2022-12-25 13:04:47+02:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="203" LINES="50"]
+[?2004h]0;sheerzad@osboxes: ~/Desktop/part12-containers-applications/script-answers[01;32msheerzad@osboxes[00m:[01;34m~/Desktop/part12-containers-applications/script-answers[00m$ [7msudo docker run -it ubuntu bash[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo docker run -it ubuntu bash
+[A
+[?2004l[sudo] password for sheerzad: 
+[?2004h]0;root@540e7154559a: /root@540e7154559a:/# [K]0;root@540e7154559a: /root@540e7154559a:/# ls
+[?2004l[0m[01;36mbin[0m  [01;34mboot[0m  [01;34mdev[0m  [01;34metc[0m  [01;34mhome[0m  [01;36mlib[0m  [01;36mlib32[0m  [01;36mlib64[0m  [01;36mlibx32[0m  [01;34mmedia[0m  [01;34mmnt[0m  [01;34mopt[0m  [01;34mproc[0m  [01;34mroot[0m  [01;34mrun[0m  [01;36msbin[0m  [01;34msrv[0m  [01;34msys[0m  [30;42mtmp[0m  [01;34musr[0m  [01;34mvar[0m
+[?2004h]0;root@540e7154559a: /root@540e7154559a:/# cd app/src       usr/app   src
+[?2004l[?2004h]0;root@540e7154559a: /usr/srcroot@540e7154559a:/usr/src# ls
+[?2004l[?2004h]0;root@540e7154559a: /usr/srcroot@540e7154559a:/usr/src# mkdir app
+[?2004l[?2004h]0;root@540e7154559a: /usr/srcroot@540e7154559a:/usr/src# ls
+[?2004l[0m[01;34mapp[0m
+[?2004h]0;root@540e7154559a: /usr/srcroot@540e7154559a:/usr/src# touch app/index.js
+[?2004l[?2004h]0;root@540e7154559a: /usr/srcroot@540e7154559a:/usr/src# cd app
+[?2004l[?2004h]0;root@540e7154559a: /usr/src/approot@540e7154559a:/usr/src/app# ls
+[?2004lindex.js
+[?2004h]0;root@540e7154559a: /usr/src/approot@540e7154559a:/usr/src/app# [?2004l
+exit
+[?2004h]0;sheerzad@osboxes: ~/Desktop/part12-containers-applications/script-answers[01;32msheerzad@osboxes[00m:[01;34m~/Desktop/part12-containers-applications/script-answers[00m$ [?2004l
+exit
+
+Script done on 2022-12-25 13:05:42+02:00 [COMMAND_EXIT_CODE="0"]
