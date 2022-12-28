@@ -1,3 +1,5 @@
+const redisClient = require("../redis");
+
 const express = require("express");
 const { Todo } = require("../mongo");
 const router = express.Router();
@@ -5,6 +7,7 @@ const router = express.Router();
 /* GET todos listing. */
 router.get("/", async (_, res) => {
   const todos = await Todo.find({});
+  await redisClient.setAsync("length_of_todos", todos.length);
   res.send(todos);
 });
 
@@ -14,6 +17,12 @@ router.post("/", async (req, res) => {
     text: req.body.text,
     done: false,
   });
+
+  const count = await redisClient.getAsync("added_todos");
+  count
+    ? await redisClient.setAsync("added_todos", +count + 1)
+    : await redisClient.setAsync("added_todos", 1);
+
   res.send(todo);
 });
 
@@ -52,15 +61,6 @@ singleRouter.put("/", async (req, res) => {
     );
     res.status(200).send(response);
   }
-  // const response = await Todo.findByIdAndUpdate(
-  //   req.todo._id,
-  //   { ...req.body },
-  //   {
-  //     new: true,
-  //   }
-  // );
-  // if (response) return res.status(200).send(res);
-  //res.sendStatus(405); // Implement this
   res.status(201).end();
 });
 
