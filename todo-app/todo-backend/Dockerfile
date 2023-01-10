@@ -2,8 +2,8 @@ FROM node:16
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY ./todo-backend .
 
-RUN npm ci
+RUN npm i
 
 CMD npm start
